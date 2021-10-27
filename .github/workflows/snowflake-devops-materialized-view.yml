@@ -4,7 +4,7 @@ name: snowflake-devops-materialized-view
 on:
   push:
     branches:
-      - master
+      - main
     paths:
       - 'RigDig-Data-Source-main/MATERIALIZED VIEW/**'
 
