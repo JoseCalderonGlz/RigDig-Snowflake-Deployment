@@ -1,0 +1,3 @@
+create or replace TABLE TABLE_DEMO (
+	FIELD_NAME VARCHAR(16777216),
+);
