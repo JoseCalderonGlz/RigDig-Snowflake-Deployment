@@ -4,7 +4,7 @@ name: snowflake-devops-stage-external-table
 on:
   push:
     branches:
-      - master
+      - main
     paths:
       - 'RigDig-Data-Source-main/STAGE EXTERNAL TABLE/**'
 
