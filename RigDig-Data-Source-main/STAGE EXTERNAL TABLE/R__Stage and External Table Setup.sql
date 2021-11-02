@@ -1,6 +1,6 @@
 -- Setup External Tables
 -- Creat file formats for Polk and RigDig
-create or replace file format ITD_RIG_DIG.rigdig_csv_pipe_windows_file_format
+create or replace file format OMEGA_PROD_DB.ITD_SCHEMACHANGE_DEMO.rigdig_csv_pipe_windows_file_format
  TYPE = CSV
  FIELD_DELIMITER = '|'
  SKIP_HEADER = 1

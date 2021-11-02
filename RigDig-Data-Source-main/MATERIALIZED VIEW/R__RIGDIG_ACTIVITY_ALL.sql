@@ -1,6 +1,6 @@
 -- Create Materialized Views
 -- RigDig Activity
-create or replace materialized view ITD_RIG_DIG.RIGDIG_ACTIVITY_ALL as
+create or replace materialized view OMEGA_PROD_DB.ITD_SCHEMACHANGE_DEMO.RIGDIG_ACTIVITY_ALL as
 select SPLIT_PART(metadata$filename,'/',-1)::VARCHAR(250) AS FILE_NAME
       ,CASE SUBSTRING(SPLIT_PART(metadata$filename,'/',-1),LEN(SPLIT_PART(metadata$filename,'/',-1))-5,2)
             WHEN '00' THEN 9999

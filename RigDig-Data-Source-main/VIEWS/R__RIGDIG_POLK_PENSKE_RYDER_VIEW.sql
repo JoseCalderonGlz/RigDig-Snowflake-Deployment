@@ -1,4 +1,4 @@
-create or replace view ITD_RIG_DIG.RIGDIG_POLK_PENSKE_RYDER_VIEW as
+create or replace view OMEGA_PROD_DB.ITD_SCHEMACHANGE_DEMO.RIGDIG_POLK_PENSKE_RYDER_VIEW as
 select re.RRID
       ,re.USDOT
       ,re.EDABUYID
@@ -265,10 +265,10 @@ select re.RRID
       ,case when upper(pn.REG_NAME) like '%IDEALEASE%' then 1 else 0 end as IDEALEASE
       ,case when upper(pn.REG_NAME) like '%NATIONALEASE%' then 1 else 0 end as NATIONALEASE
       ,case when upper(pn.REG_NAME) like '%PACLEASE%' then 1 else 0 end as PACLEASE
-from ITD_RIG_DIG.RIGDIG_ENTITY_ALL re
-inner join ITD_RIG_DIG.RIGDIG_LINEAGE_ALL rl
+from OMEGA_PROD_DB.ITD_SCHEMACHANGE_DEMO.RIGDIG_ENTITY_ALL re
+inner join OMEGA_PROD_DB.ITD_SCHEMACHANGE_DEMO.RIGDIG_LINEAGE_ALL rl
 on re.RRID = rl.RRID
-inner join ITD_POLK.POLK_NEWTRK_ALL pn
+inner join OMEGA_PROD_DB.ITD_SCHEMACHANGE_DEMO.POLK_NEWTRK_ALL pn
 on rl.EQT_VIN_SN = pn.VIN
 where pn.VIN_GVW in ('6','7','8')
 and pn.REG_VOCATION like '%LEASE%'
