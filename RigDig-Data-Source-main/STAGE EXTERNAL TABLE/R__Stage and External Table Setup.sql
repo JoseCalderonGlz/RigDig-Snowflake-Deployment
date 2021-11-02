@@ -46,7 +46,7 @@ create or replace file format OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.rigdig_csv_pip
 
 -- create stages
 CREATE OR REPLACE STAGE OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.rigdig_s3_stage
-    storage_integration = ITD_DATA_ENGINEERING_S3_INT_PROD
+    storage_integration = ITD_DATA_ENGINEERING_S3_INT_TEST
     url='s3://itd-us-west-2-prc-dataengineering/incoming-RigDig/'
     FILE_FORMAT = ITD_RIG_DIG.rigdig_csv_pipe_windows_file_format
 ;
