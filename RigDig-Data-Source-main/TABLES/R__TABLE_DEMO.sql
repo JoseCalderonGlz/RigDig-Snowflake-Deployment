@@ -1,3 +1,3 @@
-create or replace TABLE TABLE_DEMO (
+create TABLE if not exists TABLE_DEMO (
 	FIELD_NAME VARCHAR(16777216),
 );
