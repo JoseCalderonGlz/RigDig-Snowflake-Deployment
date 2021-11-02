@@ -4,7 +4,7 @@ create TABLE if not exists OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.RIGDIG_ENTITY_DAT
 );
 
 INSERT INTO OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.RIGDIG_ENTITY_DATA_DICTIONARY VALUES
-$$('$$||FIELD_NAME||$$','$$||DESCRIPTION||$$'),$$
+('$$||FIELD_NAME||$$','$$||DESCRIPTION||$$'),
 ('RRID','RRID: The Randall-Reilly ID is a unique ID that represents a single entity. The RRID enables linking of data elements from various data sources to a unique site. In most cases, the entity will hbe for the main headquarters location. However, if an entity operates more than one USDOT, we will also have a separate RRID for each separate USDOT.'),
 ('USDOT','USDOT: This is the number assigned by the Federal Motor Carrier Safety Administration to a census record. Each entity should have only one active census number, which represents the principal place of business for the entity.'),
 ('EDABUYID','EDABUYID: Randall-Reilly\'s Data Division also compiles business intelligence on Construction, Agriculture, Logging, Lift Trucks, Machine Tools, Office Equipment, Printing, and Woodworking equipment financed throughout the US. Where an EDABUYID has been matched to our Trucking BI database, the unique EDABUYID is appended to the record. This allows us to provide information on a client\'s financing activity in multiple industries.'),
