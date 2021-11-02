@@ -1,4 +1,3 @@
--- RigDig Lineage
 create or replace materialized view OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.RIGDIG_LINEAGE_ALL as
 select SPLIT_PART(metadata$filename,'/',-1)::VARCHAR(250) AS FILE_NAME
       ,('20'|| SUBSTRING(SPLIT_PART(metadata$filename,'/',-1),LEN(SPLIT_PART(metadata$filename,'/',-1))-5,2))::NUMBER(4,0) AS RPT_YR

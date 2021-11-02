@@ -1,5 +1,3 @@
--- Create Materialized Views
--- RigDig Activity
 create or replace materialized view OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.RIGDIG_ACTIVITY_ALL as
 select SPLIT_PART(metadata$filename,'/',-1)::VARCHAR(250) AS FILE_NAME
       ,CASE SUBSTRING(SPLIT_PART(metadata$filename,'/',-1),LEN(SPLIT_PART(metadata$filename,'/',-1))-5,2)
