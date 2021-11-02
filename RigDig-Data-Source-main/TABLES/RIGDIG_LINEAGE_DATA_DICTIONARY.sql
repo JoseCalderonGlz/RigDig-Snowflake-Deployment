@@ -1,10 +1,10 @@
-create TABLE if not exists RIGDIG_LINEAGE_DATA_DICTIONARY (
+create TABLE if not exists OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.RIGDIG_LINEAGE_DATA_DICTIONARY (
 	FIELD_NAME VARCHAR(16777216),
 	DESCRIPTION VARCHAR(16777216)
 );
 
 
-INSERT INTO RIGDIG_LINEAGE_DATA_DICTIONARY VALUES
+INSERT INTO OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.RIGDIG_LINEAGE_DATA_DICTIONARY VALUES
 ('RRID','RRID: The Randall-Reilly ID is a unique ID that represents a single entity. The RRID enables linking of data elements from various data sources to a unique site. In most cases, the entity will hbe for the main headquarters location. However, if an entity operates more than one USDOT, we will also have a separate RRID for each separate USDOT.'),
 ('EQT_VIN_SN','Either the Vehicle Identification Number (VIN) or the Serial Number (SN) of the unit.'),
 ('EQT_MAKE','When the VIN is validated, this is the make for that specific VIN. When the VIN is not validated, the make is defined based on the make listed on the inspection document or the UCC financing statement."'),

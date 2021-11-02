@@ -1,5 +1,5 @@
 -- RigDig Entity
-create or replace materialized view OMEGA_PROD_DB.ITD_SCHEMACHANGE_DEMO.RIGDIG_ENTITY_ALL as
+create or replace materialized view OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.RIGDIG_ENTITY_ALL as
 select SPLIT_PART(metadata$filename,'/',-1)::VARCHAR(250) AS FILE_NAME
       ,('20'|| SUBSTRING(SPLIT_PART(metadata$filename,'/',-1),LEN(SPLIT_PART(metadata$filename,'/',-1))-5,2))::NUMBER(4,0) AS RPT_YR
       ,CASE SUBSTRING(SPLIT_PART(metadata$filename,'/',-1),LEN(SPLIT_PART(metadata$filename,'/',-1))-8,3)::VARCHAR(3)
@@ -269,4 +269,4 @@ select SPLIT_PART(metadata$filename,'/',-1)::VARCHAR(250) AS FILE_NAME
       ,NULLIF(value:c251,'')::VARCHAR(1) AS SEGMENT_DUMP
       ,NULLIF(value:c252,'')::VARCHAR(1) AS SEGMENT_HEAVY_HAUL
       ,NULLIF(value:c253,'')::VARCHAR(1) AS SEGMENT_REFUSE
-from ITD_RIG_DIG.rigdig_entity_files;
+from OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.rigdig_entity_files;

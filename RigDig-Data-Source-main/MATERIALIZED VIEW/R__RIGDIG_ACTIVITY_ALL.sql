@@ -1,6 +1,6 @@
 -- Create Materialized Views
 -- RigDig Activity
-create or replace materialized view OMEGA_PROD_DB.ITD_SCHEMACHANGE_DEMO.RIGDIG_ACTIVITY_ALL as
+create or replace materialized view OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.RIGDIG_ACTIVITY_ALL as
 select SPLIT_PART(metadata$filename,'/',-1)::VARCHAR(250) AS FILE_NAME
       ,CASE SUBSTRING(SPLIT_PART(metadata$filename,'/',-1),LEN(SPLIT_PART(metadata$filename,'/',-1))-5,2)
             WHEN '00' THEN 9999
@@ -48,4 +48,4 @@ select SPLIT_PART(metadata$filename,'/',-1)::VARCHAR(250) AS FILE_NAME
       ,NULLIF(value:c26,'')::VARCHAR(50) AS EQT_MAKE
       ,NULLIF(value:c27,'')::VARCHAR(4) AS EQT_MODEL_YEAR
       ,NULLIF(value:c28,'')::VARCHAR(50) AS EQT_GVWR_CLASS
-from ITD_RIG_DIG.rigdig_activity_files;
+from OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.rigdig_activity_files;
