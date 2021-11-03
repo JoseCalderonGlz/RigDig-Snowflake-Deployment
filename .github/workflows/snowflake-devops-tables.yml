@@ -4,7 +4,7 @@ name: snowflake-devops-tables
 on:
   push:
     branches:
-      - TEST
+      - main
     paths:
       - 'RigDig-Data-Source-main/TABLES/**'
 
