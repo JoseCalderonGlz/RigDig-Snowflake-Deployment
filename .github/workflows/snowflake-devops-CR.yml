@@ -4,7 +4,7 @@ name: snowflake-devops-CR
 on:
   push:
     branches:
-      - main
+      - TEST
     paths:
       - 'RigDig-Data-Source-main/CR/**'
 
