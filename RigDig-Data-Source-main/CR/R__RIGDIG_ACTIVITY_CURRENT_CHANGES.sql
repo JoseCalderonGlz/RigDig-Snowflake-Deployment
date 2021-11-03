@@ -1,3 +1,3 @@
---alter table OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.RIGDIG_ACTIVITY_CURRENT add column new_column varchar;
+alter table OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.RIGDIG_ACTIVITY_CURRENT add column new_column varchar(231);
 
-alter table OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.RIGDIG_ACTIVITY_CURRENT drop column new_column; 
+--alter table OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.RIGDIG_ACTIVITY_CURRENT drop column new_column; 
