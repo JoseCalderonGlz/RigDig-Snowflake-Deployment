@@ -4,7 +4,7 @@ name: snowflake-devops-streams
 on:
   push:
     branches:
-      - TEST
+      - main
     paths:
       - 'RigDig-Data-Source-main/STREAMS/**'
 
