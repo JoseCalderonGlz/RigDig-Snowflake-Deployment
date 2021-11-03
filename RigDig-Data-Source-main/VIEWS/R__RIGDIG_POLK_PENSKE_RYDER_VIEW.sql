@@ -1,4 +1,4 @@
-create view if not exists ITD_SCHEMACHANGE_DEMO.RIGDIG_POLK_PENSKE_RYDER_VIEW as
+create or replace view ITD_SCHEMACHANGE_DEMO.RIGDIG_POLK_PENSKE_RYDER_VIEW as
 select re.RRID
       ,re.USDOT
       ,re.EDABUYID

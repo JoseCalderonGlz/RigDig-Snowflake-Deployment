@@ -1,4 +1,4 @@
-create materialized view IF NOT EXISTS ITD_SCHEMACHANGE_DEMO.RIGDIG_LINEAGE_ALL as
+create or replace materialized view ITD_SCHEMACHANGE_DEMO.RIGDIG_LINEAGE_ALL as
 select SPLIT_PART(metadata$filename,'/',-1)::VARCHAR(250) AS FILE_NAME
       ,('20'|| SUBSTRING(SPLIT_PART(metadata$filename,'/',-1),LEN(SPLIT_PART(metadata$filename,'/',-1))-5,2))::NUMBER(4,0) AS RPT_YR
       ,CASE SUBSTRING(SPLIT_PART(metadata$filename,'/',-1),LEN(SPLIT_PART(metadata$filename,'/',-1))-8,3)::VARCHAR(3)
@@ -23,4 +23,5 @@ select SPLIT_PART(metadata$filename,'/',-1)::VARCHAR(250) AS FILE_NAME
       ,TRY_TO_DATE(AS_VARCHAR(value:c6)) AS EQT_DOMRA_ENT
       ,TRY_TO_DATE(AS_VARCHAR(value:c7)) AS EQT_DOMRA_VIN
       ,TRY_TO_NUMERIC(AS_VARCHAR(value:c8),10,0) AS EQT_OUT_OF_FLEET_FLAG
-from ITD_SCHEMACHANGE_DEMO.rigdig_lineage_files;
+from ITD_SCHEMACHANGE_DEMO.rigdig_lineage_files
+LIMIT 10;
