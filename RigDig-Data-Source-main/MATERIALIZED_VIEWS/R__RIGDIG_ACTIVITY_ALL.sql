@@ -1,4 +1,4 @@
-create materialized view IF NOT EXISTS OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.RIGDIG_ACTIVITY_ALL
+create materialized view IF NOT EXISTS ITD_SCHEMACHANGE_DEMO.RIGDIG_ACTIVITY_ALL
 cluster by (RPT_YR, RPT_MONTH)
 as
 select SPLIT_PART(metadata$filename,'/',-1)::VARCHAR(250) AS FILE_NAME
@@ -48,4 +48,4 @@ select SPLIT_PART(metadata$filename,'/',-1)::VARCHAR(250) AS FILE_NAME
       ,NULLIF(value:c26,'')::VARCHAR(50) AS EQT_MAKE
       ,NULLIF(value:c27,'')::VARCHAR(4) AS EQT_MODEL_YEAR
       ,NULLIF(value:c28,'')::VARCHAR(50) AS EQT_GVWR_CLASS
-from OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.rigdig_activity_files;
+from ITD_SCHEMACHANGE_DEMO.rigdig_activity_files;

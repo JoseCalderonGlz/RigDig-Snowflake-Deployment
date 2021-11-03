@@ -1,6 +1,6 @@
 -- Setup External Tables
 -- Creat file formats for Polk and RigDig
-create or replace file format OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.rigdig_csv_pipe_windows_file_format
+create file format if not exists OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.rigdig_csv_pipe_windows_file_format
  TYPE = CSV
  FIELD_DELIMITER = '|'
  SKIP_HEADER = 1
@@ -22,7 +22,7 @@ create or replace file format OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.rigdig_csv_pip
  EMPTY_FIELD_AS_NULL = TRUE
  SKIP_BYTE_ORDER_MARK = FALSE;
 
-create or replace file format OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.rigdig_csv_pipe_noquote_windows_file_format
+create file format if not exists ITD_SCHEMACHANGE_DEMO.rigdig_csv_pipe_noquote_windows_file_format
  TYPE = CSV
  FIELD_DELIMITER = '|'
  SKIP_HEADER = 1
@@ -45,26 +45,26 @@ create or replace file format OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.rigdig_csv_pip
  SKIP_BYTE_ORDER_MARK = FALSE;
 
 -- create stages
-CREATE OR REPLACE STAGE OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.rigdig_s3_stage
+CREATE STAGE if not exists ITD_SCHEMACHANGE_DEMO.rigdig_s3_stage
     storage_integration = ITD_DATA_ENGINEERING_S3_INT_TEST
     url='s3://itd-us-west-2-drc-dataengineering/incoming-RigDig/'
     FILE_FORMAT = OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.rigdig_csv_pipe_windows_file_format
 ;
 
 -- create external tables
-CREATE OR REPLACE EXTERNAL TABLE OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.rigdig_activity_files
+CREATE EXTERNAL TABLE if not exists ITD_SCHEMACHANGE_DEMO.rigdig_activity_files
 WITH LOCATION = @OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.rigdig_s3_stage
 file_format = OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.rigdig_csv_pipe_windows_file_format
 auto_refresh = TRUE
 PATTERN = '.*(Activity).*(csv)';
 
-CREATE OR REPLACE EXTERNAL TABLE OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.rigdig_entity_files
+CREATE EXTERNAL TABLE if not exists ITD_SCHEMACHANGE_DEMO.rigdig_entity_files
 WITH LOCATION = @OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.rigdig_s3_stage
 file_format = OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.rigdig_csv_pipe_windows_file_format
 auto_refresh = TRUE
 PATTERN = '.*(Entity).*(csv)';
 
-CREATE OR REPLACE EXTERNAL TABLE OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.rigdig_lineage_files
+CREATE EXTERNAL TABLE if not exists ITD_SCHEMACHANGE_DEMO.rigdig_lineage_files
 WITH LOCATION = @OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.rigdig_s3_stage
 file_format = OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.rigdig_csv_pipe_windows_file_format
 auto_refresh = TRUE

@@ -1,9 +1,9 @@
-create TABLE if not exists OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.RIGDIG_ACTIVITY_DATA_DICTIONARY (
+create TABLE if not exists ITD_SCHEMACHANGE_DEMO.RIGDIG_ACTIVITY_DATA_DICTIONARY (
 	FIELD_NAME VARCHAR(16777216),
 	DESCRIPTION VARCHAR(16777216)
 );
 
-INSERT INTO OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.RIGDIG_ACTIVITY_DATA_DICTIONARY VALUES
+INSERT INTO ITD_SCHEMACHANGE_DEMO.RIGDIG_ACTIVITY_DATA_DICTIONARY VALUES
 ('RRID','RRID: The Randall-Reilly ID is a unique ID that represents a single entity. The RRID enables linking of data elements from various data sources to a unique site. In most cases, the entity will hbe for the main headquarters location. However, if an entity operates more than one USDOT, we will also have a separate RRID for each separate USDOT.'),
 ('ACT_SOURCE','Source of activity detail (i.e. Inspection, Crash, UCC).'),
 ('ACT_ID','For FMCSA Inspection and Crash activity, this is a unique identifying number assigned to the recor. For UCC activity, this is an incremental number assigned by EDA to every processed UCC (used for internal tracking). The combination of ACT_ID, ACT_SOURCE, and ACT_YEAR indicates a unique Activity record.'),
