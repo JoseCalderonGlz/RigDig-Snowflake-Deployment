@@ -1,4 +1,4 @@
-create or replace materialized view OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.RIGDIG_ACTIVITY_ALL
+create materialized view IF NOT EXISTS OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.RIGDIG_ACTIVITY_ALL
 cluster by (RPT_YR, RPT_MONTH)
 as
 select SPLIT_PART(metadata$filename,'/',-1)::VARCHAR(250) AS FILE_NAME
