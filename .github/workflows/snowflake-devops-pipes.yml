@@ -4,7 +4,7 @@ name: snowflake-devops-pipes
 on:
   push:
     branches:
-      - main
+      - TEST
     paths:
       - 'PIPES/**'
 
