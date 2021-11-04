@@ -4,7 +4,7 @@ name: snowflake-devops-file_formats
 on:
   push:
     branches:
-      - TEST
+      - main
     paths:
       - 'FILE_FORMATS/**'
 

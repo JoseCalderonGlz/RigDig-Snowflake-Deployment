@@ -4,7 +4,7 @@ name: snowflake-devops-materialized-view
 on:
   push:
     branches:
-      - TEST
+      - main
     paths:
       - 'MATERIALIZED_VIEWS/**'
 

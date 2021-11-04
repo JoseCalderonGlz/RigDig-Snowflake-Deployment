@@ -4,7 +4,7 @@ name: snowflake-devops-tasks
 on:
   push:
     branches:
-      - TEST
+      - main
     paths:
       - 'TASKS/**'
 

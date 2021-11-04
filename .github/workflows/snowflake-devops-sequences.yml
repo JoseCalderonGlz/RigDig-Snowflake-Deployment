@@ -4,7 +4,7 @@ name: snowflake-devops-sequences
 on:
   push:
     branches:
-      - TEST
+      - main
     paths:
       - 'SEQUENCES/**'
 
