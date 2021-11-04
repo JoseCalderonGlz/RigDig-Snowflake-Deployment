@@ -4,7 +4,7 @@ name: snowflake-devops-external-table
 on:
   push:
     branches:
-      - main
+      - TEST
     paths:
       - 'EXTERNAL_TABLES/**'
 
