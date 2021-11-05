@@ -7,3 +7,6 @@ call PUBLIC.SafeAddColumn('ITD_SCHEMACHANGE_DEMO.TABLE_DEMO', 'new_column', 'var
 
 --TABLE NAME, COLUMN NAME
 call PUBLIC.SafeDropColumn('ITD_SCHEMACHANGE_DEMO.TABLE_DEMO', 'new_column');
+
+--TABLE NAME, COLUMN NAME, TYPE
+call PUBLIC.SafeAddColumn('ITD_SCHEMACHANGE_DEMO.TABLE_DEMO', 'new_column2', 'varchar(12312313)');
