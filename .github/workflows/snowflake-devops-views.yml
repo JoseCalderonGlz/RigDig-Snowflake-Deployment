@@ -24,6 +24,13 @@ jobs:
         uses: actions/setup-python@v2.2.1
         with:
           python-version: 3.8.x
+          
+      - name: Find and Replace
+        uses: jacobtomlinson/gha-find-replace@v2
+        with:
+          find: "OMEGA_TEST_DB"
+          replace: "OMEGA_PROD_DB"
+          regex: false
 
       - name: Run schemachange
         env:
