@@ -2,7 +2,7 @@ name: FindReplace
 on: 
   pull_request:
     branches:
-      -TEST
+      -main
       
   workflow_dispatch:
       
