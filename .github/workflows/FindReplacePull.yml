@@ -8,6 +8,6 @@ jobs:
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@v2
         with:
-          find: "RAW_PROD_DB."
-          replace: "RAW_TEST_DB."
+          find: "RAW_TEST_DB."
+          replace: "RAW_PROD_DB."
           regex: false
