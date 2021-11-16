@@ -1,4 +1,4 @@
-CREATE or replace VIEW ITD_SCHEMACHANGE_DEMO.RIGDIG_ACTIVITY_LATEST
+CREATE or replace VIEW OMEGA_TEST_DB.ITD_SCHEMACHANGE_DEMO.RIGDIG_ACTIVITY_LATEST
 comment = '@file: Views-RigDig.sql
 @author: John Pabst Jr.
 @email: A-John.Pabst@paccar.com
