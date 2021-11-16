@@ -1,5 +1,11 @@
 name: FindReplace
-on: pull_request
+on: 
+  pull_request:
+    branches:
+      -TEST
+      
+  workflow_dispatch:
+      
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -8,7 +14,7 @@ jobs:
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@v2
         with:
-          find: "OMEGA_PROD_DB."
-          replace: "OMEGA_TEST_DB."
+          find: "OMEGA_TEST_DB."
+          replace: "OMEGA_PROD_DB."
           regex: false
 
