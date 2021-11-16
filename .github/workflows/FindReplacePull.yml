@@ -1,0 +1,13 @@
+name: FindReplace
+on: pull_request
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Find and Replace
+        uses: jacobtomlinson/gha-find-replace@v2
+        with:
+          find: "RAW_PROD_DB."
+          replace: "RAW_TEST_DB."
+          regex: false
