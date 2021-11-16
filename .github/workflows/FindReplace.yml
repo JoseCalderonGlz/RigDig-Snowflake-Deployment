@@ -8,7 +8,7 @@ jobs:
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@v2
         with:
-          find: "OMEGA_TEST_DB."
-          replace: "OMEGA_PROD_DB."
+          find: "OMEGA_TEST_DB"
+          replace: "OMEGA_PROD_DB"
           regex: false
 
