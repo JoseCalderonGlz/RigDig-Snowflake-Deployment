@@ -29,7 +29,7 @@ jobs:
         uses: jacobtomlinson/gha-find-replace@v2
         with:
           find: "OMEGA_TEST_DB"
-          replace: "OMEGA_PROD_DB"
+          replace: "oi"
           regex: false
           
       - name: Run schemachange
