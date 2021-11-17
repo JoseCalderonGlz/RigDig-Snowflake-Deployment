@@ -1,2 +1,2 @@
 # RigDig-Snowflake-Deployment
-CHANGE
+CHANGED
