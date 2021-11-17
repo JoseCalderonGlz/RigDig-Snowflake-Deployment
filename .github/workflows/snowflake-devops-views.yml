@@ -30,7 +30,8 @@ jobs:
         with:
           find: "OMEGA_TEST_DB"
           replace: "oi"
-          regex: false
+          include: "VIEWS/**"
+          regex: true
           
       - name: Run schemachange
         env:
