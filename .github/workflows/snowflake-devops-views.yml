@@ -28,8 +28,8 @@ jobs:
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@v2
         with:
-          find: "TEST"
-          replace: "oi"
+          find: "RRID"
+          replace: "CHANGED"
           include: "VIEWS/**"
           regex: true
           
