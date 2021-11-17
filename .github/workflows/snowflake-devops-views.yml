@@ -25,6 +25,14 @@ jobs:
         with:
           python-version: 3.8.x
           
+      - uses: actions/checkout@v2
+      - name: Find and Replace
+        uses: jacobtomlinson/gha-find-replace@v2
+        with:
+          find: "OMEGA_TEST_DB"
+          replace: "OMEGA_PROD_DB"
+          regex: false
+          
       - name: Run schemachange
         env:
           SF_ACCOUNT: ${{ secrets.SF_ACCOUNT }}
