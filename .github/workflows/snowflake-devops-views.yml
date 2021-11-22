@@ -43,6 +43,10 @@ jobs:
         run: |
           echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
           python --version
+          
+          echo "Finding and replacing TEST environment to PROD"
+          sed -i 's/OMEGA_TEST_DB./OMEGA_PROD_DB./g' VIEWS/**
+          
           echo "Step 1: Installing schemachange"
           pip install schemachange
           
